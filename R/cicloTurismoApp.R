@@ -23,7 +23,7 @@ app_ui = function() {
         title = "Turismo e Lazer",
         tags$li(a(href = 'https://www2.recife.pe.gov.br/',
                   img(src = 'dual_logo3.png',
-                      title = "Turismo e Lazers", height = "50px"),
+                      title = "Turismo e Lazer", height = "50px"),
                   style = "padding-top:10px; padding-bottom:10px;"),
                 class = "dropdown")
     )
