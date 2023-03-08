@@ -77,7 +77,7 @@ analiseMalhaServer = function(id, nome_variavel) {
             filteredData = reactive({
                 dplyr::select(stravaFDS, "name", nome_variavel(), "geometry") %>% 
                 tidyr::drop_na(nome_variavel())
-            })
+            }) %>% bindCache(nome_variavel())
             
             # intersecao:
             output$intersecaoKM = renderValueBox({
@@ -217,7 +217,7 @@ analiseMalhaServer = function(id, nome_variavel) {
                                   "Estação Bike PE",
                                   "Estação Salva Bike")
                     )
-            })
+            }) %>% bindCache(nome_variavel())
 
         }
     )
